@@ -15,6 +15,8 @@ mongoose
     console.error(err);
   });
 
-app.listen(7000, () => {
-  console.log("Server started on port 7000");
+// Start the server
+let port = process.env.PORT || 7000;
+app.listen(port, () => {
+  console.log("Server started on port " + port);
 });
