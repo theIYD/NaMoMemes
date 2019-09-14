@@ -14,6 +14,7 @@
     "express": "^4.17.1",
     "images-scraper": "^2.0.11",
     "lowdb": "^1.0.0",
+    "mongoose": "^5.7.1",
     "node-cron": "^2.0.3",
     "nodemailer": "^6.3.0"
   }
