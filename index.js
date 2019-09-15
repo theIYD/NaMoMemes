@@ -10,7 +10,9 @@ mongoose
   .connect(process.env.MONGODB)
   .then(db => {
     console.log("MongoDB connected");
-    require("./lib/cron");
+    if (process.env.DEV) {
+      require("./lib/cron");
+    }
   })
   .catch(err => {
     console.error(err);
