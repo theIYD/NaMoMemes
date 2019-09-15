@@ -18,7 +18,7 @@ Shows randomly `n` memes
 
 Shows `n` memes with pagination
 
-#### GET ['/memes/latest/:n'](https://namo-memes.herokuapp.com/memes/latest/10)
+#### GET [`/memes/latest/:n`](https://namo-memes.herokuapp.com/memes/latest/10)
 
 Shows `n` latest memes
 
