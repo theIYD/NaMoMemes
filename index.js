@@ -44,10 +44,31 @@ app.get("/", (req, res, next) => {
   });
 });
 
-// Show memes
+// Get random memes
 app.get("/memes/:count", async (req, res, next) => {
-  const count = parseInt(req.params.count) || 10;
+  const count = parseInt(req.params.count, 10) || 10;
   const memes = await dbFuncs.getMemes(count);
+  if (memes) {
+    res.status(200).json(memes);
+  }
+});
+
+// Get memes with pagination
+app.get("/memes/page/:page/:count", async (req, res, next) => {
+  const limit = parseInt(req.params.count, 10) || 10;
+  const page = parseInt(req.params.page, 10) || 0;
+
+  const memes = await dbFuncs.getMemesPagination(page, limit);
+  if (memes) {
+    res.status(200).json(memes);
+  }
+});
+
+// Get latest memes
+app.get("/memes/latest/:count", async (req, res, next) => {
+  const limit = parseInt(req.params.count, 10) || 10;
+
+  const memes = await dbFuncs.getLatestMemes(limit);
   if (memes) {
     res.status(200).json(memes);
   }
