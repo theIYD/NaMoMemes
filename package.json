@@ -15,7 +15,7 @@
     "images-scraper": "^2.0.11",
     "lodash": "^4.17.15",
     "lowdb": "^1.0.0",
-    "mongoose": "^5.7.1",
+    "mongoose": "^5.7.5",
     "node-cron": "^2.0.3",
     "nodemailer": "^6.3.0"
   }
