@@ -13,7 +13,7 @@
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "images-scraper": "^2.0.11",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "lowdb": "^1.0.0",
     "mongoose": "^5.7.5",
     "node-cron": "^2.0.3",
